@@ -21,11 +21,29 @@ public class Fraction {
 		this.num = n;
 		this.den = d;
 	}
-	
+
 	public void sub(Fraction f) {
 		int n = this.num * f.den - this.den * f.num;
 		int d = this.den * f.den;
 		this.num = n;
 		this.den = d;
+	}
+
+	public String toString() {
+		return this.num + "/" + this.den;
+	}
+
+	public void cancel() {
+		int ggt = gcd(this.num, this.den);
+		this.num = this.num/ggt;
+		this.den = this.den/ggt;
+	}
+
+	private static int gcd(int a, int b) {
+		if(a == b){
+			return a;
+		}else{
+			return gcd(b, b-(a%b));
+		}
 	}
 }
