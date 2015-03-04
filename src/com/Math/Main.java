@@ -13,5 +13,4 @@ public class Main {
 		f.div(g);
 		System.out.println(f.toString());
 	}
-
 }
