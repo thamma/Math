@@ -12,5 +12,7 @@ public class Main {
 		System.out.println(f.toString());
 		f.div(g);
 		System.out.println(f.toString());
+		f.exp(5);
+		System.out.println(f.toString());
 	}
 }
