@@ -1,6 +1,8 @@
 package com.Math;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Mathutils {
 
@@ -78,5 +80,44 @@ public class Mathutils {
 
 	public static int sqrt(int a) {
 		return sqrth(1, a) - 1;
+	}
+
+	public static boolean isprime(int a) {
+		if (a < 2) {
+			return false;
+		} else if (a == 2) {
+			return true;
+		} else {
+			for (int i = 2; i <= sqrt(a); i++) {
+				if (mod(a, i) == 0) {
+					return false;
+				}
+			}
+			return true;
+		}
+	}
+
+	public static void nthprimes(int n) {
+		String out = "";
+		for (int i = 0; i < n; i++) {
+			if (isprime(i)) {
+				out += ", " + i;
+			}
+		}
+		System.out.println(out.replaceFirst(", ", ""));
+	}
+
+	public static List<Integer> factor(int a) {
+		List<Integer> factors = new ArrayList<Integer>();
+		while (a > 1) {
+			iter: for (int i = 2; i <= a; i++) {
+				if (mod(a, i) == 0) {
+					factors.add(i);
+					a = div(a, i);
+					break iter;
+				}
+			}
+		}
+		return factors;
 	}
 }
