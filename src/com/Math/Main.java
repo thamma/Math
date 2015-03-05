@@ -22,13 +22,13 @@ public class Main {
 		v.normalize();
 		System.out.println(v.length());
 		Vector a = new Vector(1.0, 0.0, 0.0);
-		Vector b = new Vector(0.0, 1.0, 0.0);
-		Vector c = new Vector(0.0, 0.0, 1.0);
+		Vector b = new Vector(3.0, 0.0, 0.0);
+		Vector c = new Vector(0.0, 1.0, 0.0);
 		System.out.println(a.orthogonal(b));
 		System.out.println(Vector.triple(a, b, c));
 		System.out.println(a.triple(b, c));
-		 a = new Vector(47.0,1.0,1.0);
-		 b = new Vector(10.0, 1.0, 0.0);
 		System.out.println(a.cross(b).normalize().multiply(5.0).orthogonal(a));
+		System.out.println(a.angle(b));
+		System.out.println(a.collinear(b));
 	}
 }

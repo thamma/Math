@@ -39,6 +39,18 @@ public class Vector {
 		return false;
 	}
 
+	public Double angle(Vector v) {
+		return (360.0 / (2.0 * Math.PI))
+				* Math.acos(this.scalar(v) / (this.length() * v.length()));
+	}
+
+	public boolean collinear(Vector v) {
+		if (this.angle(v) == 0.0 || this.angle(v) == 180.0) {
+			return true;
+		}
+		return false;
+	}
+
 	public static Double triple(Vector a, Vector b, Vector c) {
 		return (a.cross(b)).scalar(c);
 	}
