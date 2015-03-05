@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Mathutils {
 
-	public static int exp(int a, int b) {
+	public static int pow(int a, int b) {
 		int count = a;
 		for (int i = 1; i < b; i++) {
 			count *= a;
