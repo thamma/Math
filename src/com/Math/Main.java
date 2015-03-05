@@ -30,5 +30,8 @@ public class Main {
 		System.out.println(a.cross(b).normalize().multiply(5.0).orthogonal(a));
 		System.out.println(a.angle(b));
 		System.out.println(a.collinear(b));
+		System.out.println("Parallelogram");
+		System.out.println(a.areaParallelogram(c));
+
 	}
 }

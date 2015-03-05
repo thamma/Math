@@ -51,6 +51,10 @@ public class Vector {
 		return false;
 	}
 
+	public Double areaParallelogram(Vector v) {
+		return this.cross(v).length();
+	}
+
 	public static Double triple(Vector a, Vector b, Vector c) {
 		return (a.cross(b)).scalar(c);
 	}
