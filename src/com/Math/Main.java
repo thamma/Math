@@ -32,6 +32,5 @@ public class Main {
 		System.out.println(a.collinear(b));
 		System.out.println("Parallelogram");
 		System.out.println(a.areaParallelogram(c));
-
 	}
 }
